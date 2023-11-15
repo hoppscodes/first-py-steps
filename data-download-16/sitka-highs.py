@@ -3,4 +3,5 @@ filename = 'C:/Users/samue/first-py-steps/first-py-steps/data-download-16/chapte
 with open(filename) as f:
     reader = csv.reader(f)
     header_row = next(reader)
-    print(header_row)
+    for index, column_header in enumerate(header_row):
+        print(index, column_header)
