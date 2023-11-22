@@ -18,8 +18,9 @@ with open(filename) as f:
 #chart data   
 plt.style.use('seaborn-v0_8-dark')
 fig, ax = plt.subplots()
-ax.plot(dates, highs, c='red')
-ax.plot(dates, lows, c='blue')
+ax.plot(dates, highs, c='red', alpha=0.5)
+ax.plot(dates, lows, c='blue', alpha=0.5)
+ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 #chart format
 ax.set_title("highest and lowest temp recorded, july 2018", fontsize=24)
 ax.set_xlabel('', fontsize=16)
